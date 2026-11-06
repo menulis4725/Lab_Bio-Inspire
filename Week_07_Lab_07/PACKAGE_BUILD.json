@@ -36,9 +36,12 @@
     "reason": "Required local transport omitted from source package",
     "runtime_behavior_modified": false
   },
-  "archive_variant": {
-    "mode": "transfer_without_10min_video",
-    "excluded_file": "07_Evidence/CSV_คลิปเล่นกับคน_10นาที_C1_20261106/คลิปเล่นกับคน_10นาที_C1.MOV",
-    "video_preserved_in_source_folder": true
+  "git_delivery": {
+    "line_endings": "preserve original bytes with * -text",
+    "video_transport": "Git LFS for MOV",
+    "video_in_working_folder": true,
+    "python_cache_excluded": true,
+    "word_edited": false,
+    "remote_push_performed": false
   }
 }

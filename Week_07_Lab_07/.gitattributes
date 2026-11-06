@@ -1,0 +1,5 @@
+# Preserve evidence bytes and historical source hashes on every operating system.
+* -text
+# Keep the 616 MB video in Git LFS rather than a normal Git blob.
+*.MOV filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text

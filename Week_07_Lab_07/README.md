@@ -1,5 +1,3 @@
-> ZIP ฉบับส่งต่อ: ไม่รวมวิดีโอ10นาทีตามคำขอ อ่าน [วิธีใส่คลิปภายหลัง](VIDEO_NOT_INCLUDED_TH.md) CSVและไฟล์อื่นยังครบ
-
 # Week07 LeLamp ชุดส่งงานฉบับ 6 พฤศจิกายน 2026
 
 เปิด3ไฟล์หลัก — ใช้ Word ฉบับที่ผู้ใช้แก้ไขและส่งล่าสุดจาก Desktop คัดลอกตรงต้นฉบับโดยไม่แก้เนื้อหา/ฟอนต์/รูปแบบ:
@@ -24,7 +22,7 @@
 
 ตรวจไฟล์ด้วย `python verify_package.py` และทดสอบแบบmockด้วย `python run_pc_checks.py` ไม่เปิดฮาร์ดแวร์ ใช้completedpolicyผ่าน `python check_submission.py --policy-file completed_policy.py --contract group` ใน02_Source/Lab07; student_policy.pyเก็บเป็นstarterต้นฉบับ
 
-ยังไม่ได้อัปGitHub/ส่งให้อาจารย์ ไฟล์ในเครื่องเป็นชุดพร้อมนำส่ง ไม่ใช่การรับรองคะแนนหรือการอนุมัติโดยผู้สอน
+ชุดนี้เตรียมสำหรับอัปเดตGitHubและให้ผู้ใช้นำส่งอาจารย์ ไม่ใช่การรับรองคะแนนหรือการอนุมัติโดยผู้สอน
 
 
 ## หลักฐานเพิ่มเติม: เล่นกับคน10นาที
@@ -38,3 +36,7 @@
 ## Source dependency correction
 
 แนบ [calibration_readonly/read_only_bus.py](02_Source/calibration_readonly/read_only_bus.py) แล้ว อยู่ภายใต้root02_Source ใช้โดยservo transport; เพิ่มการตรวจimportในinterpreterแยกก่อนmocktests ป้องกันไฟล์ขาดถูกmockซ่อน ไม่เปลี่ยนท่า/PID/runtime behavior หรือข้อมูลทดลอง
+
+## GitHub พร้อมวิดีโอ
+
+[วิธีรับไฟล์และตรวจ Git LFS](GITHUB_DELIVERY_TH.md): วิดีโอ10นาทีแนบผ่านGit LFS เก็บCSV/JSONL/source snapshotsเป็นไบต์เดิมด้วย.gitattributesเพื่อให้manifestตรงทุกระบบ ไม่รวมcachePythonในmanifest

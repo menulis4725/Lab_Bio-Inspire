@@ -10,14 +10,14 @@ contract=json.loads((root/'04_Design/TOPIC_CONTRACT_13.json').read_text(encoding
 if len(contract['topics'])!=13:errors.append('topic contract !=13')
 raw=root/'03_Results/real_robot_pilot'
 for condition,suffix in [('C0','db0023c1'),('C1','86706a5d')]:
-    verification=json.loads((raw/f'{condition}_bag_{suffix}/verification.json').read_text())
+    verification=json.loads((raw/f'{condition}_bag_{suffix}/verification.json').read_text(encoding='utf-8'))
     if not verification['all_13_observed'] or verification['missing_topics']:errors.append(condition+' ROS13 missing')
     matches=list((raw/(condition+'_raw')).glob('*/summary.json'))
     if len(matches)!=1:errors.append(condition+' ambiguous raw session');continue
-    summary=json.loads(matches[0].read_text())
+    summary=json.loads(matches[0].read_text(encoding='utf-8'))
     if hashlib.sha256(matches[0].with_name('trace.jsonl').read_bytes()).hexdigest()!=summary['trace_sha256']:errors.append(condition+' raw trace hash')
     if summary['complete'] or verification['status']!='INCOMPLETE':errors.append(condition+' partial pilot mislabeled')
-source_hashes=json.loads((raw/'source_snapshot_hashes.json').read_text())
+source_hashes=json.loads((raw/'source_snapshot_hashes.json').read_text(encoding='utf-8'))
 for name,expected in source_hashes.items():
     if hashlib.sha256((raw/'source_snapshot'/name).read_bytes()).hexdigest()!=expected:errors.append('pilot source mismatch '+name)
 print(json.dumps(dict(package_integrity='PASS' if not errors else 'FAIL',files_checked=len(manifest),pilot_source_files_checked=len(source_hashes),
