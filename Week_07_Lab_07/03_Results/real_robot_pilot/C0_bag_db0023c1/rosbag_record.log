@@ -1,0 +1,39 @@
+[WARN] [ros2bag]: Positional "topics" argument deprecated. Please use optional "--topics" argument instead.
+[INFO] [1793882895.452594313] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1793882895.456385363] [rosbag2_recorder]: Starting recording to '/mnt/c/Users/USER/Desktop/Project/Lamp/bio_inspire/results/lab07_pilot_current_20261105/C0_bag_db0023c1/bag'
+[INFO] [1793882895.609484818] [rosbag2_storage]: Opened database '/mnt/c/Users/USER/Desktop/Project/Lamp/bio_inspire/results/lab07_pilot_current_20261105/C0_bag_db0023c1/bag/bag_0.db3' for READ_WRITE.
+[INFO] [1793882895.619743031] [rosbag2_recorder]: Overriding subscription profile for /lamp/joint_states
+[INFO] [1793882895.623237186] [rosbag2_recorder]: Subscribed to topic '/lamp/joint_states'
+[INFO] [1793882895.630804419] [rosbag2_recorder]: Overriding subscription profile for /lamp/perception/face
+[INFO] [1793882895.631650061] [rosbag2_recorder]: Subscribed to topic '/lamp/perception/face'
+[INFO] [1793882895.636467403] [rosbag2_recorder]: Overriding subscription profile for /lamp/input/touch
+[INFO] [1793882895.637124310] [rosbag2_recorder]: Subscribed to topic '/lamp/input/touch'
+[INFO] [1793882895.640495773] [rosbag2_recorder]: Overriding subscription profile for /lamp/input/status
+[INFO] [1793882895.641421957] [rosbag2_recorder]: Subscribed to topic '/lamp/input/status'
+[INFO] [1793882895.644846808] [rosbag2_recorder]: Overriding subscription profile for /lamp/trace
+[INFO] [1793882895.645524906] [rosbag2_recorder]: Subscribed to topic '/lamp/trace'
+[INFO] [1793882895.651736157] [rosbag2_recorder]: Overriding subscription profile for /lamp/servo_command
+[INFO] [1793882895.652672104] [rosbag2_recorder]: Subscribed to topic '/lamp/servo_command'
+[INFO] [1793882895.658277923] [rosbag2_recorder]: Overriding subscription profile for /lamp/input/distance
+[INFO] [1793882895.659458259] [rosbag2_recorder]: Subscribed to topic '/lamp/input/distance'
+[INFO] [1793882895.663112166] [rosbag2_recorder]: Overriding subscription profile for /lamp/input/button
+[INFO] [1793882895.663751530] [rosbag2_recorder]: Subscribed to topic '/lamp/input/button'
+[INFO] [1793882895.666765634] [rosbag2_recorder]: Overriding subscription profile for /lamp/emotion
+[INFO] [1793882895.667378699] [rosbag2_recorder]: Subscribed to topic '/lamp/emotion'
+[INFO] [1793882895.671746201] [rosbag2_recorder]: Overriding subscription profile for /lamp/interaction
+[INFO] [1793882895.672382053] [rosbag2_recorder]: Subscribed to topic '/lamp/interaction'
+[INFO] [1793882895.677899003] [rosbag2_recorder]: Overriding subscription profile for /lamp/diagnostics
+[INFO] [1793882895.679432797] [rosbag2_recorder]: Subscribed to topic '/lamp/diagnostics'
+[INFO] [1793882895.685713748] [rosbag2_recorder]: Overriding subscription profile for /lamp/rgb_command
+[INFO] [1793882895.686663726] [rosbag2_recorder]: Subscribed to topic '/lamp/rgb_command'
+[INFO] [1793882895.690366586] [rosbag2_recorder]: Overriding subscription profile for /lamp/ahm_cpg/diagnostic
+[INFO] [1793882895.691338282] [rosbag2_recorder]: Subscribed to topic '/lamp/ahm_cpg/diagnostic'
+[INFO] [1793882895.691786853] [rosbag2_recorder]: Listening for topics...
+[INFO] [1793882895.692185882] [rosbag2_recorder]: Recording...
+[INFO] [1793882895.691809808] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1793882895.693334577] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1793882895.693634275] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1793882909.248163429] [rosbag2_recorder]: Pausing recording.
+[INFO] [1793882909.249101340] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1793882909.263771894] [rosbag2_recorder]: Recording stopped
+[INFO] [1793882909.271120869] [rosbag2_recorder]: Event publisher thread: Exited

@@ -1,0 +1,20 @@
+[WARN] [ros2bag]: Positional "topics" argument deprecated. Please use optional "--topics" argument instead.
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1793038258.679767700] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1793038258.679784384] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1793038258.687031092] [rosbag2_recorder]: Starting recording to '/mnt/c/Users/USER/Desktop/Project/Lamp/Lab07/ros2_ws/bags/course_ros_20261027_loggingfix_attempt2_r01'
+[INFO] [1793038258.714751464] [rosbag2_recorder]: Listening for topics...
+[INFO] [1793038258.715841022] [rosbag2_recorder]: Recording...
+[INFO] [1793038258.714811670] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1793038262.333488326] [rosbag2_recorder]: Subscribed to topic '/lamp/emotion'
+[INFO] [1793038262.345257324] [rosbag2_recorder]: Subscribed to topic '/lamp/interaction'
+[INFO] [1793038262.364443399] [rosbag2_recorder]: Subscribed to topic '/lamp/rgb_command'
+[INFO] [1793038262.399954602] [rosbag2_recorder]: Subscribed to topic '/lamp/servo_command'
+[INFO] [1793038266.126369050] [rosbag2_recorder]: Subscribed to topic '/lamp/input/touch'
+[INFO] [1793038266.197461351] [rosbag2_recorder]: Subscribed to topic '/lamp/input/button'
+[INFO] [1793038266.218047520] [rosbag2_recorder]: Subscribed to topic '/lamp/input/distance'
+[INFO] [1793038266.219093101] [rosbag2_recorder]: All requested topics are subscribed. Stopping discovery...
+[INFO] [1793038266.219845160] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1793038289.959617467] [rosbag2_recorder]: Pausing recording.
+[INFO] [1793038289.960795391] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1793038290.203586937] [rosbag2_recorder]: Recording stopped
+[INFO] [1793038290.221247368] [rosbag2_recorder]: Event publisher thread: Exited
