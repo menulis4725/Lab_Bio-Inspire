@@ -12,7 +12,7 @@ Repository นี้เก็บงาน Lab02–Lab07 ที่อัปโห
 
 ## Repository สำหรับรวมงานบน fork
 
-[menulis4725/Lamp_Bio-Fork-](https://github.com/menulis4725/Lamp_Bio-Fork-) เป็น fork ของ [repository อาจารย์](https://github.com/potiwat/RAE67_bio_ins) สำหรับรวมงานและพัฒนาต่อ
+[menulis4725/Lamp_Bio-Fork-](https://github.com/menulis4725/Lamp_Bio-Fork-) เป็น fork ของ [repository อาจารย์](https://github.com/potiwat/RAE67_bio_ins) สำหรับรวมงานและพัฒนาต่อ โดยงานทั้ง 6 แลปจะรวมอยู่ใน [Group_07_Submission](https://github.com/menulis4725/Lamp_Bio-Fork-/tree/main/Group_07_Submission)
 
 Repository เดิมนี้ยังเก็บไว้เป็นหลักฐานประวัติการส่งงาน การคัดลอกไฟล์ไป fork ไม่ได้ย้ายประวัติ commit เดิมไปด้วย
 
