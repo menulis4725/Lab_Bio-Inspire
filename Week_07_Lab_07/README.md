@@ -1,42 +1,36 @@
-# Week07 LeLamp ชุดส่งงานฉบับ 6 พฤศจิกายน 2026
+# Lab 7 ผลของฮอร์โมนต่อจังหวะ CPG ของ LampBio-Inpire
 
-เปิด3ไฟล์หลัก — ใช้ Word ฉบับที่ผู้ใช้แก้ไขและส่งล่าสุดจาก Desktop คัดลอกตรงต้นฉบับโดยไม่แก้เนื้อหา/ฟอนต์/รูปแบบ:
+**กลุ่ม 7 · ทดลองวันที่ 12 พฤศจิกายน 2569**
 
-1. [ใบงาน Word](05_Worksheet/Week07_Worksheet_FINAL_RESULTS_20261105.docx) หรือ [Markdown](05_Worksheet/worksheet.md)
-2. [Proposal Word](01_Proposal/Week07_Proposal_Current_TH.docx) และ [PDF](01_Proposal/Week07_Proposal_Current_TH.pdf)
-3. [รายงานผลฉบับผู้ใช้แก้ไขล่าสุด](03_Results/final_summary/Week07_Results_Summary_20261105.docx)
+[ดูวิดีโอเล่นกับโคมจริง 10 นาทีบน YouTube](https://youtu.be/-zckfxbT9Jk?feature=shared) · [เปิดไฟล์วิดีโอต้นฉบับ](07_Evidence/present/IMG_4568.MOV)
 
-[ตรวจตามข้อกำหนดLab07](SUBMISSION_AUDIT_20261106_TH.md) • [ผลsoftwarechecks](03_Results/final_submission_checks_20261106/results.json) • [รายการWordทุกไฟล์](WORD_FILES_INDEX_TH.md)
+| เอกสารหลัก | เนื้อหา |
+|---|---|
+| [รายงานผล Word](03_Results/Week07_Results_TH.docx) | วิธีทดลอง กราฟที่ใช้แกนเวลาร่วมกัน ผลแยกสามคู่ และข้อจำกัดของการวัด |
+| [ใบงาน Word](05_Worksheet/Week07_Worksheet_TH.docx) · [ใบงาน Markdown](05_Worksheet/worksheet.md) | คำถามงานวิจัย สถาปัตยกรรม สมการ ตัวชี้วัด ผลบนคอมและหุ่นจริง และคำตอบตามใบงาน |
+| [Proposal Word](01_Proposal/Week07_Proposal_Current_TH.docx) · [Proposal PDF](01_Proposal/Week07_Proposal_Current_TH.pdf) | ตัวแปรควบคุม ตารางสิ่งเร้า และแผนการเปรียบเทียบ |
 
-## ข้อมูลที่แนบ
+## ผลจากหุ่นจริง
 
-- [AHM real6trials](03_Results/real_robot_final/SIX_TRIAL_REPORT_TH.md) และ [simulation6trials](03_Results/simulation_final/summary.json)
-- [Teacher completedpolicy/transport/ROS3roles](03_Results/course_bridge_verified_20261026_27/RECOVERY_AUDIT.json)
-- [LivePi→WSL60s934rows](03_Results/live_wsl_20261106/TECHNICAL_STATUS.json)
-- [คลิปเล่นและCSV](07_Evidence/VIDEO_INDEX.md)
-- [13topiccontract](04_Design/TOPIC_CONTRACT_13.json), [Draw.io](04_Design/LeLamp_Architecture.drawio), [sourceกราฟ3roles](04_Design/COURSE_THREE_ROLES_SOURCE.json)
+C0 ใช้สิ่งเร้าโดยตรง (R = S) ส่วน C1 ใช้ระดับฮอร์โมน (R = H) เก็บ 3 คู่ รอบละ 180 วินาที ทั้ง 6 รอบผ่านครบ 6 อารมณ์ รวม 21,464 ตัวอย่าง เมื่อปล่อย Touch คาบการส่ายฐาน ID1 ในช่วงที่เหลือของ Happy เฉลี่ย **2.806 วินาทีต่อรอบใน C0 และ 2.750 วินาทีต่อรอบใน C1** โดยให้น้ำหนักแต่ละคู่เท่ากัน ช่วงหลังปล่อยวัดได้ 1–2 รอบต่อการทดลอง ค่าเฉลี่ยการเปลี่ยนคาบของ CPG (M2) ลดลงในสองคู่และเพิ่มขึ้นในหนึ่งคู่
 
-แยก C0/C1 transport ideal/delaydrop จาก AHM R=S/H และNormalpilotคนละรุ่น ผลCPGo1ไม่ใช่หลักฐานphysicalsmoothness มีN/A/hold/ordereffectตามจริง ROSอยู่WSLเชื่อมPiแบบlive; PiคุมUARTเอง Pi 5 ควบคุมโคมโดยตรง ส่วน WSL รับข้อมูลผ่าน SSH ไม่มี MCU แยกหรือ micro-ROS Agent
+- [กราฟก่อนแตะ ระหว่างแตะ และหลังปล่อย](03_Results/Figures/01_Happy_input_CPG_and_encoder.png) ขยายช่วงวินาที 39–67 ของรอบทดลอง เริ่ม Touch ที่วินาที 42 และปล่อยที่วินาที 59
+- [กราฟคาบ CPG และคาบฐานทั้งสามคู่](03_Results/Figures/02_Touch_release_all_pairs.png) แต่ละจุดคือคาบเต็มที่วัดได้
+- [กราฟทั้งหกอารมณ์ตลอด 180 วินาที](03_Results/Figures/03_Six_state_timeline.png) แสดงค่า φ ที่ระบบเลือกตามลำดับเวลาจริง
+- [ดัชนีหกรอบ](03_Results/real_robot/summary/Run_index.csv) · [ตาราง M1 และ M2 ของหุ่นจริง](03_Results/real_robot/summary/Worksheet_M1_M2.csv)
 
-มีเฉพาะ Word Final 3 ไฟล์ในชุดส่ง ต้นฉบับและ Word เวอร์ชันเก่าย้ายออกแล้ว; raw pilot/failedattempts ที่เป็นหลักฐานการทดลองยังคงไว้ตามจริง ไม่ใช้แทน final trials
+## ตรวจตามโจทย์อาจารย์
 
-ตรวจไฟล์ด้วย `python verify_package.py` และทดสอบแบบmockด้วย `python run_pc_checks.py` ไม่เปิดฮาร์ดแวร์ ใช้completedpolicyผ่าน `python check_submission.py --policy-file completed_policy.py --contract group` ใน02_Source/Lab07; student_policy.pyเก็บเป็นstarterต้นฉบับ
+[ผลตรวจข้อกำหนด Lab 07 ทีละข้อ](LAB07_REQUIREMENTS_TH.md) รวมตัวตรวจ Proposal และ policy ของอาจารย์ ผล bridge สองเงื่อนไข × สามรอบ และขอบเขตที่โคมใช้สถาปัตยกรรม Raspberry Pi 5
 
-ชุดนี้เตรียมสำหรับอัปเดตGitHubและให้ผู้ใช้นำส่งอาจารย์ ไม่ใช่การรับรองคะแนนหรือการอนุมัติโดยผู้สอน
+## ตรวจข้อมูลเพิ่มเติม
 
+| ส่วน | หลักฐาน |
+|---|---|
+| หุ่นจริง | [คำอธิบายข้อมูล](03_Results/README_TH.md) และโฟลเดอร์ P1–P3 ใน [real_robot](03_Results/real_robot/) |
+| แบบจำลอง | [วิธีรันซ้ำและผลใหม่ 3 คู่](03_Results/simulation/README_TH.md) ใช้บริบทของ C0 ในคู่นั้นกับทั้งสองเงื่อนไข |
+| ระบบและซอร์ส | [แผนภาพทางเดินข้อมูล](04_Design/Lamp_data_flow.png) · [ซอร์สและเครื่องมือวิเคราะห์](02_Source/) |
+| การสาธิต | [คลิปและ CSV](07_Evidence/present/README_TH.md) บันทึกครั้งเดียวตั้งแต่ feedback แรกถึงสุดท้าย 631.926 วินาที รวมช่วง Safety คืนท่า |
+| ที่มาของแบบจำลอง | [เอกสารอ้างอิง](06_References/README_TH.md) |
 
-## หลักฐานเพิ่มเติม: เล่นกับคน10นาที
-
-[CSVของคลิปเล่นกับคน10นาที C1](07_Evidence/CSV_คลิปเล่นกับคน_10นาที_C1_20261106/README_TH.md) เก็บจริง600.02s/7,098snapshots ครบ13topics แยกจากcontrolled C0/C1เดิม; แนบวิดีโอรอบนี้แล้วในโฟลเดอร์เดียวกับCSV ยังไม่ตรวจframe synchronization ไม่เปลี่ยนWordทั้ง3ไฟล์
-
-## ตำแหน่งรูปวงจร วิดีโอ และ CSV
-
-เปิด [รายการตำแหน่งไฟล์](FILE_LOCATIONS_TH.md) เพื่อหารูปวงจรฉบับผู้ใช้ใน04_Design และวิดีโอ10นาทีพร้อมCSVใน07_Evidence รูปคัดลอกตรงต้นฉบับ ไม่แก้Wordทั้ง3ไฟล์
-
-## Source dependency correction
-
-แนบ [calibration_readonly/read_only_bus.py](02_Source/calibration_readonly/read_only_bus.py) แล้ว อยู่ภายใต้root02_Source ใช้โดยservo transport; เพิ่มการตรวจimportในinterpreterแยกก่อนmocktests ป้องกันไฟล์ขาดถูกmockซ่อน ไม่เปลี่ยนท่า/PID/runtime behavior หรือข้อมูลทดลอง
-
-## GitHub พร้อมวิดีโอ
-
-[วิธีรับไฟล์และตรวจ Git LFS](GITHUB_DELIVERY_TH.md): วิดีโอ10นาทีแนบผ่านGit LFS เก็บCSV/JSONL/source snapshotsเป็นไบต์เดิมด้วย.gitattributesเพื่อให้manifestตรงทุกระบบ ไม่รวมcachePythonในmanifest
+ตรวจ SHA-256 และสัญญาข้อมูลทั้งชุดจากโฟลเดอร์นี้ด้วย `python verify_package.py` บนคอม

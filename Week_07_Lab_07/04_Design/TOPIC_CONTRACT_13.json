@@ -91,5 +91,6 @@
     "nod": 5,
     "unit": "rad offset from recorded Normal; extend is joint angle, not cm"
   },
-  "transport": "UART owner on Pi; recorded telemetry replay to ROS2 Jazzy/rosbag in WSL; no ROS actuator subscriber"
+  "transport": "Current acquisition: Pi camera/GPIO/ToF and native UART motor owner to disk. ROS 2 observation topics are the proposed external interface.",
+  "scope": "Course interface design for the current configuration. The six real 180 s runs produced native Pi logs and CSV. No live ROS bag is asserted for those runs."
 }

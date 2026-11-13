@@ -1,12 +1,4 @@
 __pycache__/
-*.pyc
+*.py[cod]
+~$*
 .venv/
-.env
-.env.*
-build/
-install/
-log/
-*.avi
-*.mkv
-*.tmp
-02_Source/results/new_*/
